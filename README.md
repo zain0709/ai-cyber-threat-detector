@@ -69,19 +69,38 @@ npm start
 
 
 # 2. Create venv
+```
 cd backend
 python -m venv venv
 venv\Scripts\activate
-
+```
 # 3. Install libs
+```
 pip install --upgrade pip
 pip install flask flask-cors torch torchvision transformers scikit-learn pandas numpy matplotlib
 pip freeze > requirements.txt
+```
 
-# 4. Run backend
+# AI Cyber Threat Detector
+
+A prototype web app that uses transformer models (DistilBERT) to analyze logs
+and detect potential cybersecurity anomalies.
+
+## Tech Stack
+- **Frontend:** React + Chart.js
+- **Backend:** Flask + Transformers (Hugging Face)
+- **AI Model:** DistilBERT (to be fine-tuned)
+- **Setup:** Python venv + Node.js frontend
+
+## Run Locally
+```bash
+# Backend
+cd backend
+venv\Scripts\activate
 python app.py
 
-# 5. (New terminal)
+# Frontend
 cd frontend
 npm install
 npm start
+
